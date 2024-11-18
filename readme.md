@@ -42,4 +42,6 @@ Also, a simple Hello world endpoint is created, have a look at the class **Hello
 
 More information on MicroProfile can be found [here](https://microprofile.io/)
 
+## Thanks
+
 
