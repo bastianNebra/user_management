@@ -1,20 +1,11 @@
-FROM maven:3.9.4-eclipse-temurin-17 AS build
+FROM maven:3.9.4-eclipse-temurin-11 AS build
 
-WORKDIR /user_management
-
-COPY pom.xml ./
-RUN mvn dependency:go-offline -B
+WORKDIR /app
 
 COPY . ./
 
-RUN mvn clean package -DskipTests
+RUN mvn clean package
 
-FROM eclipse-temurin:17-jre
+EXPOSE 9082
 
-WORKDIR /user_management
-
-COPY --from=build /user_management/target/*.jar user_management.jar
-
-EXPOSE 8080
-
-CMD ["java", "-jar", "user_management.jar"]
+RUN mvn liberty:dev
