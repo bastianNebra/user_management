@@ -1,32 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Eclipse MicroProfile demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benutzerverwaltung</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <nav>
+            <a href="#">Logo</a>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Benutzerverwaltung</a></li>
+                <li><a href="#">Einstellungen</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Willkommen zur Benutzerverwaltung!</h1>
+        <p>Hier kannst du Benutzer hinzufügen, bearbeiten und verwalten.</p>
+        
+        <section>
+            <h2>Aktive Benutzer</h2>
+            <p>Momentan sind 150 Benutzer aktiv.</p>
+        </section>
+        
+        <section>
+            <h2>Schnellaktionen</h2>
+            <button>Benutzer hinzufügen</button>
+            <button>Rollen verwalten</button>
+        </section>
+    </main>
 
-<h2>MicroProfile</h2>
-
-<a href="data/hello" target="_blank" >Hello JAX-RS endpoint</a> <br/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <footer>
+        <p>© 2024 Benutzerverwaltungsservice. Alle Rechte vorbehalten.</p>
+    </footer>
 </body>
 </html>

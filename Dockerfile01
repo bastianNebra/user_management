@@ -1,6 +1,0 @@
-FROM open-liberty:beta-java11
-WORKDIR /usermanagement
-COPY . /usermanagement/
-EXPOSE 8082
-RUN nvm liberty:dev
-

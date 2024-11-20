@@ -13,7 +13,6 @@ public class PasswordTools {
 	private static final String SECRET_KEY_FACTORY_ALGORITHM = "PBKDF2WithHmacSHA1";
 	private static final int KEY_LENGTH_BITS = 160;
 	private static final int ITERATION_COUNT = 65536;
-
 	private static final String RANDOM_NUMBER_GENERATOR_ALGORITHM = "SHA1PRNG";
 	private static final int SALT_LENGTH_BYTES = 32;
 
@@ -21,9 +20,7 @@ public class PasswordTools {
 			throws NoSuchAlgorithmException, InvalidKeySpecException {
 		final SecretKeyFactory secretKeyFactory = SecretKeyFactory.getInstance(SECRET_KEY_FACTORY_ALGORITHM);
 		final KeySpec keySpec = new PBEKeySpec(password.toCharArray(), salt, ITERATION_COUNT, KEY_LENGTH_BITS);
-
 		final SecretKey secretKey = secretKeyFactory.generateSecret(keySpec);
-
 		return secretKey.getEncoded();
 	}
 
